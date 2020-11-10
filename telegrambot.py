@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from settings import TG_TOKEN, TG_API_URL
+from settings import TG_TOKEN
 def main():
-    my_bot = Updater(TG_TOKEN, TG_API_URL, use_context=True)
+    my_bot = Updater(TG_TOKEN, use_context=True)
 
     my_bot.dispatcher.add_handler(CommandHandler('start', sms))
     my_bot.start_polling()
